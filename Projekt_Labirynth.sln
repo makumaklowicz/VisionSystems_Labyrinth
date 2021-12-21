@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Projekt_Labirynth", "Projekt_Labirynth\Projekt_Labirynth.csproj", "{F82BFEF9-C212-4658-9AE8-754B1F33451A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F82BFEF9-C212-4658-9AE8-754B1F33451A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F82BFEF9-C212-4658-9AE8-754B1F33451A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F82BFEF9-C212-4658-9AE8-754B1F33451A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F82BFEF9-C212-4658-9AE8-754B1F33451A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
