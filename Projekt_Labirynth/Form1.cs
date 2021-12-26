@@ -42,5 +42,6 @@ namespace Projekt_Labirynth
                 CvInvoke.Circle(viewport_Buffer, new Point(X, Y), 10, new MCvScalar(0, 0, 255), -1);
             Viewport.Image = viewport_Buffer.Bitmap;
         }
+
     }
 }
