@@ -41,6 +41,7 @@
             this.Viewport.Size = new System.Drawing.Size(596, 474);
             this.Viewport.TabIndex = 0;
             this.Viewport.TabStop = false;
+            this.Viewport.Click += new System.EventHandler(this.Viewport_Click);
             // 
             // Load_IMG_button
             // 

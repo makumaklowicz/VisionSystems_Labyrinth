@@ -15,7 +15,8 @@ namespace Projekt_Labirynth
     public partial class Form1 : Form
     {
 
-        Image<Bgr, byte> viewport_Buffer; 
+        Image<Bgr, byte> viewport_Buffer;
+        Mat image_Buffer = new Mat();
 
         public Form1()
         {
@@ -24,10 +25,21 @@ namespace Projekt_Labirynth
 
         private void Load_IMG_button_Click(object sender, EventArgs e)
         {
-            Mat temp = new Mat();
-            temp = CvInvoke.Imread(@"C:\Users\miste\Desktop\Projekt_Wizyjne_Labirynth\Labirynth.png");
-            CvInvoke.Resize(temp, temp, Viewport.Size);
-            viewport_Buffer = temp.ToImage<Bgr, byte>();
+            image_Buffer = CvInvoke.Imread(@"C:\Users\miste\Desktop\Projekt_Wizyjne_Labirynth\Labirynth.png");
+            CvInvoke.Resize(image_Buffer, image_Buffer, Viewport.Size);
+            viewport_Buffer = image_Buffer.ToImage<Bgr, byte>();
+            Viewport.Image = viewport_Buffer.Bitmap;
+        }
+
+        private void Viewport_Click(object sender, EventArgs e)
+        {
+                CvInvoke.Resize(image_Buffer, image_Buffer, Viewport.Size);
+                viewport_Buffer = image_Buffer.ToImage<Bgr, byte>();
+                int X, Y;
+                MouseEventArgs me = e as MouseEventArgs;
+                X = me.X;
+                Y = me.Y;
+                CvInvoke.Circle(viewport_Buffer, new Point(X, Y), 10, new MCvScalar(0, 0, 255), -1);
             Viewport.Image = viewport_Buffer.Bitmap;
         }
     }
